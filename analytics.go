@@ -21,8 +21,8 @@ import (
 // Version of the client.
 const Version = "2.1.0"
 
-// Endpoint for the Segment API.
-const Endpoint = "https://api.segment.io"
+// Endpoint for the Astronomer API.
+const Endpoint = "https://api.astronomer.io"
 
 // DefaultContext of message batches.
 var DefaultContext = map[string]interface{}{
@@ -135,13 +135,13 @@ type Client struct {
 	upcount int
 }
 
-// New client with write key.
+// New client with app ID.
 func New(key string) *Client {
 	c := &Client{
 		Endpoint: Endpoint,
 		Interval: 5 * time.Second,
 		Size:     250,
-		Logger:   log.New(os.Stderr, "segment ", log.LstdFlags),
+		Logger:   log.New(os.Stderr, "astronomer ", log.LstdFlags),
 		Verbose:  false,
 		Client:   *http.DefaultClient,
 		key:      key,

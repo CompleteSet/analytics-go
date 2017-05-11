@@ -54,7 +54,7 @@ func ExampleTrack() {
 		Event:  "Download",
 		UserId: "123456",
 		Properties: map[string]interface{}{
-			"application": "Segment Desktop",
+			"application": "Astronomer Desktop",
 			"version":     "1.1.0",
 			"platform":    "osx",
 		},
@@ -68,7 +68,7 @@ func ExampleTrack() {
 	//       "event": "Download",
 	//       "messageId": "I'm unique",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "platform": "osx",
 	//         "version": "1.1.0"
 	//       },
@@ -101,7 +101,7 @@ func ExampleClose() {
 		Event:  "Download",
 		UserId: "123456",
 		Properties: map[string]interface{}{
-			"application": "Segment Desktop",
+			"application": "Astronomer Desktop",
 			"version":     "1.1.0",
 			"platform":    "osx",
 		},
@@ -117,7 +117,7 @@ func ExampleClose() {
 	//       "event": "Download",
 	//       "messageId": "I'm unique",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "platform": "osx",
 	//         "version": "1.1.0"
 	//       },
@@ -150,7 +150,7 @@ func ExampleInterval() {
 		Event:  "Download",
 		UserId: "123456",
 		Properties: map[string]interface{}{
-			"application": "Segment Desktop",
+			"application": "Astronomer Desktop",
 			"version":     "1.1.0",
 			"platform":    "osx",
 		},
@@ -165,7 +165,7 @@ func ExampleInterval() {
 	//       "event": "Download",
 	//       "messageId": "I'm unique",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "platform": "osx",
 	//         "version": "1.1.0"
 	//       },
@@ -199,7 +199,7 @@ func ExampleTrackWithTimestampSet() {
 		Event:  "Download",
 		UserId: "123456",
 		Properties: map[string]interface{}{
-			"application": "Segment Desktop",
+			"application": "Astronomer Desktop",
 			"version":     "1.1.0",
 			"platform":    "osx",
 		},
@@ -216,7 +216,7 @@ func ExampleTrackWithTimestampSet() {
 	//       "event": "Download",
 	//       "messageId": "I'm unique",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "platform": "osx",
 	//         "version": "1.1.0"
 	//       },
@@ -250,7 +250,7 @@ func ExampleTrackWithMessageIdSet() {
 		Event:  "Download",
 		UserId: "123456",
 		Properties: map[string]interface{}{
-			"application": "Segment Desktop",
+			"application": "Astronomer Desktop",
 			"version":     "1.1.0",
 			"platform":    "osx",
 		},
@@ -267,7 +267,7 @@ func ExampleTrackWithMessageIdSet() {
 	//       "event": "Download",
 	//       "messageId": "abc",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "platform": "osx",
 	//         "version": "1.1.0"
 	//       },
@@ -301,7 +301,7 @@ func ExampleTrack_context() {
 		Event:  "Download",
 		UserId: "123456",
 		Properties: map[string]interface{}{
-			"application": "Segment Desktop",
+			"application": "Astronomer Desktop",
 			"version":     "1.1.0",
 			"platform":    "osx",
 		},
@@ -321,7 +321,7 @@ func ExampleTrack_context() {
 	//       "event": "Download",
 	//       "messageId": "I'm unique",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "platform": "osx",
 	//         "version": "1.1.0"
 	//       },
@@ -356,7 +356,7 @@ func ExampleTrack_many() {
 			Event:  "Download",
 			UserId: "123456",
 			Properties: map[string]interface{}{
-				"application": "Segment Desktop",
+				"application": "Astronomer Desktop",
 				"version":     i,
 			},
 		})
@@ -370,7 +370,7 @@ func ExampleTrack_many() {
 	//       "event": "Download",
 	//       "messageId": "I'm unique",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "version": 0
 	//       },
 	//       "timestamp": "2009-11-10T23:00:00+0000",
@@ -381,7 +381,7 @@ func ExampleTrack_many() {
 	//       "event": "Download",
 	//       "messageId": "I'm unique",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "version": 1
 	//       },
 	//       "timestamp": "2009-11-10T23:00:00+0000",
@@ -392,7 +392,7 @@ func ExampleTrack_many() {
 	//       "event": "Download",
 	//       "messageId": "I'm unique",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "version": 2
 	//       },
 	//       "timestamp": "2009-11-10T23:00:00+0000",
@@ -425,7 +425,7 @@ func ExampleTrackWithIntegrations() {
 		Event:  "Download",
 		UserId: "123456",
 		Properties: map[string]interface{}{
-			"application": "Segment Desktop",
+			"application": "Astronomer Desktop",
 			"version":     "1.1.0",
 			"platform":    "osx",
 		},
@@ -449,7 +449,7 @@ func ExampleTrackWithIntegrations() {
 	//       },
 	//       "messageId": "I'm unique",
 	//       "properties": {
-	//         "application": "Segment Desktop",
+	//         "application": "Astronomer Desktop",
 	//         "platform": "osx",
 	//         "version": "1.1.0"
 	//       },
@@ -471,7 +471,7 @@ func ExampleTrackWithIntegrations() {
 
 // Tests that calling Close right after creating the client object doesn't
 // block.
-// Bug: https://github.com/segmentio/analytics-go/issues/43
+// Bug: https://github.com/astronomerio/analytics-go/issues/43
 func TestCloseFinish(_ *testing.T) {
 	c := New("test")
 	c.Close()

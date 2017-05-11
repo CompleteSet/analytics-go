@@ -6,7 +6,7 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/segmentio/analytics-go"
+	"github.com/astronomerio/analytics-go"
 	"github.com/tj/docopt"
 )
 
@@ -14,12 +14,12 @@ const Usage = `
 Analytics Go CLI
 
 Usage:
-  analytics track <event> [--properties=<properties>] [--context=<context>] [--writeKey=<writeKey>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
-  analytics screen <name> [--properties=<properties>] [--context=<context>] [--writeKey=<writeKey>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
-  analytics page <name> [--properties=<properties>] [--context=<context>] [--writeKey=<writeKey>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
-  analytics identify [--traits=<traits>] [--context=<context>] [--writeKey=<writeKey>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
-  analytics group --groupId=<groupId> [--traits=<traits>] [--properties=<properties>] [--context=<context>] [--writeKey=<writeKey>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
-  analytics alias --userId=<userId> --previousId=<previousId> [--traits=<traits>] [--properties=<properties>] [--context=<context>] [--writeKey=<writeKey>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
+  analytics track <event> [--properties=<properties>] [--context=<context>] [--appId=<appId>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
+  analytics screen <name> [--properties=<properties>] [--context=<context>] [--appId=<appId>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
+  analytics page <name> [--properties=<properties>] [--context=<context>] [--appId=<appId>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
+  analytics identify [--traits=<traits>] [--context=<context>] [--appId=<appId>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
+  analytics group --groupId=<groupId> [--traits=<traits>] [--properties=<properties>] [--context=<context>] [--appId=<appId>] [--userId=<userId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
+  analytics alias --userId=<userId> --previousId=<previousId> [--traits=<traits>] [--properties=<properties>] [--context=<context>] [--appId=<appId>] [--anonymousId=<anonymousId>] [--integrations=<integrations>] [--timestamp=<timestamp>]
   analytics -h | --help
   analytics --version
 
@@ -32,15 +32,15 @@ func main() {
 	arguments, err := docopt.Parse(Usage, nil, true, "Anaytics Go CLI", false)
 	check(err)
 
-	writeKey := getOptionalString(arguments, "--writeKey")
-	if writeKey == "" {
-		writeKey = os.Getenv("SEGMENT_WRITE_KEY")
-		if writeKey == "" {
-			log.Fatal("either $SEGMENT_WRITE_KEY or --writeKey must be provided")
+	appId := getOptionalString(arguments, "--appId")
+	if appId == "" {
+		appId = os.Getenv("ASTRONOMER_APP_ID")
+		if appId == "" {
+			log.Fatal("either $ASTRONOMER_APP_ID or --appId must be provided")
 		}
 	}
 
-	client := analytics.New(writeKey)
+	client := analytics.New(appId)
 	client.Size = 1
 	client.Verbose = true
 
