@@ -1,6 +1,6 @@
 package main
 
-import "github.com/astronomerio/analytics-go"
+import "github.com/CompleteSet/analytics-go"
 import "time"
 
 func main() {
